@@ -65,16 +65,26 @@ public class Main {
 			inputJson = (JSONObject) parser.parse(new FileReader(inputFileName));
 
 			JSONArray inputArray = (JSONArray) inputJson.get("input");
-
+			
+			if(inputArray == null)
+				throw new SimpleException("Invalid json input");
+			
 			for (Object destinationObject : inputArray) {
 				JSONObject destination = (JSONObject) destinationObject;
 				String destinationName = (String) destination.get("left");
+				if(destinationName == null)
+					throw new SimpleException("Invalid json input");
 				destinations.put(destinationName, new ArrayList<>());
 			}
 			for (Object destinationObject : inputArray) {
 				JSONObject destination = (JSONObject) destinationObject;
+			
 				String destinationName = (String) destination.get("left");
 				String dependencyName = (String) destination.get("right");
+				
+				if(destinationName == null || dependencyName == null)
+					throw new SimpleException("Invalid json input");
+				
 				if (!"".equals(dependencyName)) {
 					if (!destinations.containsKey(dependencyName))
 						throw new SimpleException(

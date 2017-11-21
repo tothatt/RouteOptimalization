@@ -1,6 +1,0 @@
-{
-	"destinations": ["x","y","z","w"],
-	"dependencies": {
-		"y":"z"		
-	}
-}

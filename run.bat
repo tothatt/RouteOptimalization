@@ -1,0 +1,1 @@
+java -jar target/RouteOptimalization-0.0.1-SNAPSHOT-jar-with-dependencies.jar test.json

@@ -1,0 +1,28 @@
+{
+	"input": [
+		{
+			"left" : "u",
+			"right" : ""
+		},
+		{
+			"left" : "v",
+			"right" : "w"
+		},
+		{
+			"left" : "w",
+			"right" : "z"
+		},
+		{
+			"left" : "x",
+			"right" : "u"
+		},
+		{
+			"left" : "y",
+			"right" : "v"
+		},
+		{
+			"left" : "z",
+			"right" : ""
+		}
+	]
+}
